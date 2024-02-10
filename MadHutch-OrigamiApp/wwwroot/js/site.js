@@ -3,22 +3,21 @@
 
 // Write your JavaScript code.
 
-function calCost()
-{
-    let form = document.getElementById("tutorEstimate");
-    let userData = new FormData(form);
 
-    if (userData.get("numOfHours") > 0) {
-        let userHrs = parseFloat(userData.get("numOfHours"));
+$(document).ready(function () {
+    $("#calcBtn").click(function () {
 
-        let hourlyWage = parseFloat(userData.get("costPerHour"));
+        let userHrs = parseFloat($("#numOfHours").val());
 
-        let totalCost = Math.round((userHrs * hourlyWage), 2);
+        if (userHrs > 0) {
+            let hourlyWage = parseFloat($("#costPerHour").val());
 
-        document.getElementById("totalOutput").innerHTML = "$" + totalCost.toString();
-    }
-    else {
-        alert("Aw man! Our calculator cannot use that value. Please reenter a number above 0 hours.");
-    }
-    
-}
+            let totalCost = Math.round((userHrs * hourlyWage), 2);
+
+            $("#totalOutput").html("$" + totalCost.toString());
+        }
+        else {
+            alert("Aw man! Our calculator cannot use that value. Please reenter a number above 0 hours.");
+        }
+    })
+})
