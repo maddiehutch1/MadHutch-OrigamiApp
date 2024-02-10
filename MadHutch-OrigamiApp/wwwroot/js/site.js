@@ -1,11 +1,12 @@
 ﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
-
+// here is js code converted into jquery
 
 $("#numOfHours").focus();
 
+// when doc is active and the calcBtn is pressed, it runs through the form and retrieves desired inputs/values to calculate total cost
+// makes sure that it is a positive integer (and not null)
 $(document).ready(function () {
     $("#calcBtn").click(function () {
 

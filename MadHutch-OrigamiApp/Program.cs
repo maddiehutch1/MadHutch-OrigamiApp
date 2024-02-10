@@ -13,13 +13,16 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// connects to HTTPS and allows the static files to be shown
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+// helps with routing from different pages
 app.UseRouting();
 
 app.UseAuthorization();
 
+// this is the default route
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -6,19 +6,14 @@ namespace MadHutch_OrigamiApp.Controllers
 {
     public class HomeController : Controller
     {
-        /*private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-        */ 
-
+        // this class returns the view of the index page
         public IActionResult Index()
         {
             return View();
         }
 
+        // this class returns the 2nd page created
         public IActionResult Page2()
         {
             return View();
