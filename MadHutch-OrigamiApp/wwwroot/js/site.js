@@ -4,6 +4,8 @@
 // Write your JavaScript code.
 
 
+$("#numOfHours").focus();
+
 $(document).ready(function () {
     $("#calcBtn").click(function () {
 
