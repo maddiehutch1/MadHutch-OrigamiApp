@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Try it Yourself";
+}
+<head>
+    <style>
+        .output-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+
+    <h3>Price Estimate for Origami Instruction</h3>
+    <form class="d-flex flex-column align-items-center" id="tutorEstimate">
+        <label>Enter number of hours you would like to receive lessons:</label>
+        <input type="number" id="numOfHours"/>
+        <br />
+        <label>Cost per Hour</label>
+        <div class="output-box align-self-center" contenteditable="false" id="costPerHour">
+             <!-- where cost per hour is displayed -->
+             10.00
+        </div>
+        <button type="button" class="btn btn-primary mt-3" id="calcBtn" onclick="calCost()">Calculate cost</button>
+    </form>
+
+    <div class="output-box align-self-center" contenteditable="false" id="totalOutput">
+        <!-- here is where cost is displayed -->
+    </div>
+
+</div>

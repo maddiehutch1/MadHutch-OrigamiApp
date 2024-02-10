@@ -18,7 +18,7 @@ namespace MadHutch_OrigamiApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Page2()
         {
             return View();
         }

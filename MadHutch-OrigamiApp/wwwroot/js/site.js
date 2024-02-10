@@ -2,3 +2,16 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+function calCost()
+{
+    let form = document.getElementById("tutorEstimate");
+    let userData = new FormData(form);
+
+    let userHrs = parseFloat(userData.get("numOfHours"));
+    let hourlyWage = parseFloat(userData.get("costPerHour"));
+
+    let totalCost = Math.round((userHrs * hourlyWage), 2);
+
+    document.getElementById("totalOutput").innerHTML = totalCost;
+}
