@@ -11,23 +11,20 @@
     </style>
 </head>
 <div class="text-center">
-    <h1>@ViewData["Title"]</h1>
+    <h1 class="display-4">@ViewData["Title"]</h1>
 
     <h3>Price Estimate for Origami Instruction</h3>
-    <form class="d-flex flex-column align-items-center" id="tutorEstimate">
+    <form method="POST" class="d-flex flex-column align-items-center" id="tutorEstimate">
         <label>Enter number of hours you would like to receive lessons:</label>
-        <input type="number" id="numOfHours"/>
+        <input type="number" id="numOfHours" name="numOfHours" />
         <br />
         <label>Cost per Hour</label>
-        <div class="output-box align-self-center" contenteditable="false" id="costPerHour">
-             <!-- where cost per hour is displayed -->
-             10.00
-        </div>
+        <input type="number" readonly id="costPerHour" name="costPerHour" value="10.00"/>
         <button type="button" class="btn btn-primary mt-3" id="calcBtn" onclick="calCost()">Calculate cost</button>
+        <br />
+        <div class="output-box align-self-center" contenteditable="false" id="totalOutput">
+            <!-- here is where cost is displayed -->
+        </div>
     </form>
-
-    <div class="output-box align-self-center" contenteditable="false" id="totalOutput">
-        <!-- here is where cost is displayed -->
-    </div>
 
 </div>
